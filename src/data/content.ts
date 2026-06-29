@@ -2,104 +2,148 @@ export interface Destination {
   name: string;
   region: string;
   image: string;
-  tours: number;
+  description: string;
 }
 
-export interface Tour {
+export interface Expedition {
   title: string;
   destination: string;
   duration: string;
   price: string;
   image: string;
-  type: 'Group Tour' | 'Tailor-Made';
+  type: 'Private Charter' | 'Scheduled Voyage';
+  highlights: string[];
+}
+
+export interface YachtFeature {
+  icon: string;
+  title: string;
+  description: string;
+  image: string;
+}
+
+export interface PressFeature {
+  publication: string;
+  title: string;
 }
 
 export const destinations: Destination[] = [
   {
-    name: 'Italy',
-    region: 'Europe',
-    image: 'https://images.pexels.com/photos/2225442/pexels-photo-2225442.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    tours: 24,
+    name: 'Raja Ampat & Papua',
+    region: 'West Papua',
+    image: 'https://images.pexels.com/photos/12877922/pexels-photo-12877922.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    description: 'The world\'s most biodiverse marine habitat, where karst islands rise from turquoise lagoons and birds of paradise dwell in the rainforest canopy.',
   },
   {
-    name: 'India',
-    region: 'Asia',
-    image: 'https://images.pexels.com/photos/1589025/pexels-photo-1589025.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    tours: 18,
+    name: 'Beyond Komodo',
+    region: 'Lesser Sunda Islands',
+    image: 'https://images.pexels.com/photos/2161467/pexels-photo-2161467.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    description: 'Dragons on pink sand beaches, world-class drift dives, and sunsets that set the savannah ablaze across the Lesser Sunda chain.',
   },
   {
-    name: 'Morocco',
-    region: 'Africa',
-    image: 'https://images.pexels.com/photos/1378247/pexels-photo-1378247.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    tours: 12,
+    name: 'Banda & Spice Islands',
+    region: 'Maluku',
+    image: 'https://images.pexels.com/photos/2161467/pexels-photo-2161467.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    description: 'Nutmeg groves, colonial forts, and underwater volcanoes in the remote Banda Sea — the original spice trade crossroads.',
   },
   {
-    name: 'Japan',
-    region: 'Asia',
-    image: 'https://images.pexels.com/photos/161251/senso-ji-temple-japan-kyoto-landmark-161251.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    tours: 9,
-  },
-  {
-    name: 'Egypt',
-    region: 'Africa',
-    image: 'https://images.pexels.com/photos/5749255/pexels-photo-5749255.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    tours: 15,
-  },
-  {
-    name: 'Peru',
-    region: 'Americas',
-    image: 'https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    tours: 7,
+    name: 'Mentawai Islands',
+    region: 'West Sumatra',
+    image: 'https://images.pexels.com/photos/1450363/pexels-photo-1450363.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    description: 'Pristine barrelling waves, ancient tribal culture, and palm-fringed lagoons off the Sumatran coast — a surfer\'s paradise.',
   },
 ];
 
-export const tours: Tour[] = [
+export const expeditions: Expedition[] = [
   {
-    title: 'Sicilian Mosaic',
-    destination: 'Sicily, Italy',
-    duration: '10 days',
-    price: '£2,895',
-    image: 'https://images.pexels.com/photos/3605030/pexels-photo-3605030.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    type: 'Group Tour',
+    title: 'Raja Ampat Archipelago',
+    destination: 'Misool to Wayag',
+    duration: '10 nights',
+    price: 'On request',
+    image: 'https://images.pexels.com/photos/12877922/pexels-photo-12877922.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    type: 'Private Charter',
+    highlights: ['4 dives daily', 'Birdwatching', 'Kayak lagoons'],
   },
   {
-    title: 'Rajasthan & the Taj Mahal',
-    destination: 'Rajasthan, India',
-    duration: '14 days',
-    price: '£3,450',
-    image: 'https://images.pexels.com/photos/3599382/pexels-photo-3599382.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    type: 'Group Tour',
+    title: 'Komodo & Rinca Safari',
+    destination: 'Labuan Bajo to Padar',
+    duration: '7 nights',
+    price: 'On request',
+    image: 'https://images.pexels.com/photos/2161467/pexels-photo-2161467.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    type: 'Scheduled Voyage',
+    highlights: ['Dragon trekking', 'Drift diving', 'Pink beaches'],
   },
   {
-    title: 'Kingdom of the Pharaohs',
-    destination: 'Cairo to Luxor, Egypt',
-    duration: '12 days',
-    price: '£3,195',
-    image: 'https://images.pexels.com/photos/7124109/pexels-photo-7124109.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    type: 'Group Tour',
+    title: 'Spice Islands Voyage',
+    destination: 'Ambon to Banda Neira',
+    duration: '9 nights',
+    price: 'On request',
+    image: 'https://images.pexels.com/photos/2901209/pexels-photo-2901209.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    type: 'Private Charter',
+    highlights: ['Historical tours', 'Wall diving', 'Nutmeg groves'],
   },
   {
-    title: 'Land of the Rising Sun',
-    destination: 'Tokyo to Kyoto, Japan',
-    duration: '13 days',
-    price: '£4,295',
-    image: 'https://images.pexels.com/photos/149381/pexels-photo-149381.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    type: 'Tailor-Made',
+    title: 'Mentawai Surf Expedition',
+    destination: 'Siberut to Sipora',
+    duration: '8 nights',
+    price: 'On request',
+    image: 'https://images.pexels.com/photos/1450363/pexels-photo-1450363.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    type: 'Private Charter',
+    highlights: ['World-class waves', 'Tribal visits', 'Fishing'],
   },
   {
-    title: 'Marrakech & the Sahara',
-    destination: 'Marrakech, Morocco',
-    duration: '9 days',
-    price: '£2,150',
-    image: 'https://images.pexels.com/photos/2034335/pexels-photo-2034335.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    type: 'Group Tour',
+    title: 'Forgotten Islands',
+    destination: 'Saumlaki to Maopora',
+    duration: '12 nights',
+    price: 'On request',
+    image: 'https://images.pexels.com/photos/5739853/pexels-photo-5739853.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    type: 'Scheduled Voyage',
+    highlights: ['Remote diving', 'Whale watching', 'Trawler wrecks'],
   },
   {
-    title: 'Inca Trail & Machu Picchu',
-    destination: 'Cusco, Peru',
-    duration: '11 days',
-    price: '£3,750',
-    image: 'https://images.pexels.com/photos/6603868/pexels-photo-6603868.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    type: 'Tailor-Made',
+    title: 'Triton Bay Discovery',
+    destination: 'Kaimana coastline',
+    duration: '8 nights',
+    price: 'On request',
+    image: 'https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    type: 'Private Charter',
+    highlights: ['Whale sharks', 'Rock art', 'Black coral forests'],
   },
+];
+
+export const yachtFeatures: YachtFeature[] = [
+  {
+    icon: 'BedDouble',
+    title: 'Eight Balcony Suites',
+    description: 'Eight private suites with personal balconies, accommodating up to 16 guests in refined comfort. Each suite is a sanctuary of teak, linen, and ocean light.',
+    image: 'https://images.pexels.com/photos/2029698/pexels-photo-2029698.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  },
+  {
+    icon: 'UtensilsCrossed',
+    title: 'Dining',
+    description: 'A chef-led galery serving Indonesian and international cuisine, sourced from local markets and the day\'s catch. Communal dining that brings guests together.',
+    image: 'https://images.pexels.com/photos/261047/pexels-photo-261047.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  },
+  {
+    icon: 'Waves',
+    title: 'Activities & Toys',
+    description: 'Diving, surfing, kayaking, fishing, paddleboarding, and snorkelling — a full complement of water toys and expedition gear, guided by expert crew.',
+    image: 'https://images.pexels.com/photos/261985/pexels-photo-261985.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  },
+];
+
+export const pressFeatures: PressFeature[] = [
+  { publication: 'Travel + Leisure', title: 'Explores Indonesia\'s Spice Islands with Kudanil Explorer' },
+  { publication: 'SURFER', title: 'Features Kudanil x Mahalo Surf Experience' },
+  { publication: 'Financial Times', title: 'Trusted for Off-Grid Luxury Voyages' },
+  { publication: 'Boat International', title: 'On board with Thibaud Epstein' },
+  { publication: 'Forbes', title: 'The Ultimate Indonesian Adventure Yacht?' },
+  { publication: 'Robb Report', title: 'Kudanil Explorer — A Favourite' },
+];
+
+export const yachtSpecs = [
+  { value: '50m', label: 'Length' },
+  { value: '8', label: 'Balcony Suites' },
+  { value: '16', label: 'Guests Maximum' },
+  { value: '17,000+', label: 'Islands to Explore' },
 ];

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,7 +9,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-sand-50 text-ink-900 font-sans antialiased;
+    @apply bg-ocean-950 text-ocean-50 font-sans antialiased;
   }
 }
 
@@ -18,16 +18,16 @@
     @apply mx-auto max-w-[1400px] px-6 md:px-10 lg:px-16;
   }
   .eyebrow {
-    @apply text-xs font-medium uppercase tracking-widest text-gold-600;
+    @apply text-xs font-medium uppercase tracking-widest text-coral-400;
   }
-  .btn-gold {
-    @apply inline-flex items-center justify-center gap-2 border border-gold-500 bg-gold-500 px-8 py-3.5 text-xs font-semibold uppercase tracking-widest text-white transition-all duration-300 hover:bg-transparent hover:text-gold-600;
+  .btn-coral {
+    @apply inline-flex items-center justify-center gap-2 border border-coral-500 bg-coral-500 px-8 py-3.5 text-xs font-semibold uppercase tracking-widest text-white transition-all duration-300 hover:bg-transparent hover:text-coral-400;
   }
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 border border-white/70 px-8 py-3.5 text-xs font-semibold uppercase tracking-widest text-white transition-all duration-300 hover:bg-white hover:text-ink-900;
+    @apply inline-flex items-center justify-center gap-2 border border-white/40 px-8 py-3.5 text-xs font-semibold uppercase tracking-widest text-white transition-all duration-300 hover:bg-white hover:text-ocean-950;
   }
   .link-underline {
-    @apply relative inline-block after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-gold-500 after:transition-all after:duration-300 hover:after:w-full;
+    @apply relative inline-block after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-coral-400 after:transition-all after:duration-300 hover:after:w-full;
   }
 }
 
@@ -42,9 +42,13 @@
 }
 
 .hero-zoom {
-  animation: slowZoom 18s ease-out forwards;
+  animation: slowZoom 20s ease-out forwards;
 }
 @keyframes slowZoom {
   from { transform: scale(1); }
-  to { transform: scale(1.15); }
+  to { transform: scale(1.12); }
+}
+
+.text-shadow-lux {
+  text-shadow: 0 2px 20px rgba(8, 24, 32, 0.5);
 }
