@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, Building2 } from 'lucide-react';
+import { Menu, X, Building2, ChevronDown } from 'lucide-react';
 
 const navItems = [
   { label: 'Who We Are', href: '#who-we-are' },
@@ -23,26 +23,26 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-charcoal-950/95 backdrop-blur-md py-3 shadow-lg shadow-charcoal-950/40'
-          : 'bg-gradient-to-b from-charcoal-950/60 to-transparent py-5'
+          ? 'bg-ink-950/95 backdrop-blur-md py-3 shadow-lg shadow-ink-950/50'
+          : 'bg-gradient-to-b from-ink-950/60 via-ink-950/20 to-transparent py-6'
       }`}
     >
-      <div className="container-corp flex items-center justify-between">
+      <div className="container-gisi flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5 text-white">
-          <Building2 size={24} strokeWidth={2} className="text-amber-400" />
+        <a href="#" className="flex items-center gap-3 text-white">
+          <Building2 size={26} strokeWidth={2} className="text-gold-400" />
           <span className="text-2xl font-bold tracking-tight md:text-3xl">
             GISI
           </span>
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-9 lg:flex">
           {navItems.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="text-xs font-semibold uppercase tracking-widest text-white/85 transition-colors duration-300 hover:text-amber-400"
+              className="text-[11px] font-semibold uppercase tracking-widest text-white/85 transition-colors duration-300 hover:text-gold-400"
             >
               {item.label}
             </a>
@@ -51,8 +51,17 @@ export function Header() {
 
         {/* Right actions */}
         <div className="hidden items-center gap-6 lg:flex">
-          <a href="#contact" className="btn-amber !py-2.5 !px-6">
+          <a
+            href="#contact"
+            className="text-[11px] font-semibold uppercase tracking-widest text-white/85 transition-colors duration-300 hover:text-gold-400"
+          >
             Contact
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-1.5 border border-gold-400/50 px-6 py-2.5 text-[11px] font-bold uppercase tracking-widest text-gold-400 transition-all duration-300 hover:bg-gold-400 hover:text-ink-950"
+          >
+            Partner With Us
           </a>
         </div>
 
@@ -67,29 +76,32 @@ export function Header() {
       </div>
 
       {/* Mobile menu */}
-      {menuOpen && (
-        <div className="absolute inset-x-0 top-full bg-charcoal-950/98 backdrop-blur-md lg:hidden">
-          <nav className="container-corp flex flex-col gap-1 py-6">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={() => setMenuOpen(false)}
-                className="border-b border-white/10 py-3 text-sm font-semibold uppercase tracking-widest text-white/85 transition-colors hover:text-amber-400"
-              >
-                {item.label}
-              </a>
-            ))}
+      <div
+        className={`absolute inset-x-0 top-full overflow-hidden bg-ink-950/98 backdrop-blur-md transition-all duration-500 lg:hidden ${
+          menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <nav className="container-gisi flex flex-col gap-1 py-6">
+          {navItems.map((item) => (
             <a
-              href="#contact"
+              key={item.label}
+              href={item.href}
               onClick={() => setMenuOpen(false)}
-              className="btn-amber mt-4 w-full"
+              className="flex items-center justify-between border-b border-white/10 py-3.5 text-sm font-semibold uppercase tracking-widest text-white/85 transition-colors hover:text-gold-400"
             >
-              Contact
+              {item.label}
+              <ChevronDown size={16} className="text-white/30" />
             </a>
-          </nav>
-        </div>
-      )}
+          ))}
+          <a
+            href="#contact"
+            onClick={() => setMenuOpen(false)}
+            className="btn-gold mt-5 w-full"
+          >
+            Partner With Us
+          </a>
+        </nav>
+      </div>
     </header>
   );
 }

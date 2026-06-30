@@ -6,8 +6,8 @@ export function FeaturedTours() {
   const { ref, visible } = useReveal<HTMLDivElement>();
 
   return (
-    <section id="business-groups" className="bg-charcoal-950 py-24 md:py-32">
-      <div className="container-corp">
+    <section id="business-groups" className="bg-ink-950 py-24 md:py-32">
+      <div className="container-gisi">
         {/* Header */}
         <div
           ref={ref}
@@ -16,11 +16,12 @@ export function FeaturedTours() {
           <p className="eyebrow mb-4">Business Groups</p>
           <h2 className="font-serif text-4xl font-medium leading-tight text-white md:text-5xl lg:text-6xl">
             A dynamic family of
-            <span className="italic text-amber-400"> companies</span>
+            <span className="italic text-gold-400"> companies</span>
           </h2>
-          <p className="mt-6 text-lg font-light leading-relaxed text-charcoal-200">
-            Where our partners can work together to serve clients more powerfully.
-            Today we are represented in two business groups.
+          <p className="mt-6 text-lg font-light leading-relaxed text-ink-200">
+            GISI is a dynamic family of companies where our partners can work
+            together to serve clients more powerfully. Today we are represented
+            in two business groups.
           </p>
         </div>
 
@@ -29,7 +30,7 @@ export function FeaturedTours() {
           {businessGroups.map((group, i) => (
             <article
               key={group.name}
-              className={`group relative overflow-hidden bg-charcoal-900 border border-white/5 transition-all duration-500 hover:border-amber-400/30 reveal ${
+              className={`group overflow-hidden bg-ink-900 border border-white/5 transition-all duration-500 hover:border-gold-400/30 reveal ${
                 visible ? 'is-visible' : ''
               }`}
               style={{ transitionDelay: `${i * 150}ms` }}
@@ -41,7 +42,13 @@ export function FeaturedTours() {
                   alt={group.name}
                   className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/30 to-transparent" />
+                {/* Project caption overlay */}
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-[10px] font-medium uppercase tracking-widest text-white/70">
+                    {group.projectCaption}
+                  </p>
+                </div>
               </div>
 
               {/* Body */}
@@ -49,13 +56,10 @@ export function FeaturedTours() {
                 <h3 className="font-serif text-3xl font-medium text-white md:text-4xl">
                   {group.name}
                 </h3>
-                <p className="mt-4 text-base font-light leading-relaxed text-charcoal-200">
+                <p className="mt-4 text-base font-light leading-relaxed text-ink-200">
                   {group.description}
                 </p>
-                <a
-                  href={group.link}
-                  className="link-arrow mt-6"
-                >
+                <a href={group.link} className="link-arrow mt-6">
                   Explore {group.name}
                   <ArrowRight
                     size={14}

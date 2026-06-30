@@ -15,34 +15,34 @@ const social = [
 
 export function Footer() {
   return (
-    <footer className="bg-charcoal-950 text-white">
+    <footer className="bg-ink-950 text-white">
       {/* Top: links */}
-      <div className="container-corp py-16 md:py-20">
+      <div className="container-gisi py-16 md:py-20">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-6">
           {/* Brand */}
           <div className="col-span-2 lg:col-span-2">
-            <div className="flex items-center gap-2.5">
-              <Building2 size={26} strokeWidth={2} className="text-amber-400" />
+            <div className="flex items-center gap-3">
+              <Building2 size={28} strokeWidth={2} className="text-gold-400" />
               <span className="text-3xl font-bold tracking-tight">GISI</span>
             </div>
-            <p className="mt-4 max-w-xs text-sm font-light leading-relaxed text-charcoal-300">
+            <p className="mt-4 max-w-xs text-sm font-light leading-relaxed text-ink-300">
               Uniting successful companies in construction services, project
               management, and engineering consulting to build long-term value
               together.
             </p>
 
             {/* Contact */}
-            <div className="mt-6 space-y-2.5 text-sm font-light text-charcoal-300">
+            <div className="mt-6 space-y-2.5 text-sm font-light text-ink-300">
               <p className="flex items-center gap-2">
-                <MapPin size={14} className="text-amber-400" />
+                <MapPin size={14} className="text-gold-400" />
                 Global Headquarters
               </p>
               <p className="flex items-center gap-2">
-                <Mail size={14} className="text-amber-400" />
+                <Mail size={14} className="text-gold-400" />
                 info@gisi.com
               </p>
               <p className="flex items-center gap-2">
-                <Phone size={14} className="text-amber-400" />
+                <Phone size={14} className="text-gold-400" />
                 +1 (000) 555-0100
               </p>
             </div>
@@ -55,7 +55,7 @@ export function Footer() {
                     key={s.label}
                     href="#"
                     aria-label={s.label}
-                    className="flex h-9 w-9 items-center justify-center border border-white/20 text-white/70 transition-all duration-300 hover:border-amber-400 hover:text-amber-400"
+                    className="flex h-9 w-9 items-center justify-center border border-white/20 text-white/70 transition-all duration-300 hover:border-gold-400 hover:text-gold-400"
                   >
                     <Icon size={16} />
                   </a>
@@ -67,7 +67,7 @@ export function Footer() {
           {/* Link columns */}
           {Object.entries(footerLinks).map(([heading, links]) => (
             <div key={heading}>
-              <h4 className="mb-4 text-xs font-semibold uppercase tracking-widest text-amber-400">
+              <h4 className="mb-4 text-[11px] font-semibold uppercase tracking-widest text-gold-400">
                 {heading}
               </h4>
               <ul className="space-y-2.5">
@@ -75,7 +75,7 @@ export function Footer() {
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-sm font-light text-charcoal-300 transition-colors hover:text-white"
+                      className="text-sm font-light text-ink-300 transition-colors duration-300 hover:text-white"
                     >
                       {link}
                     </a>
@@ -89,15 +89,15 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="container-corp flex flex-col items-center justify-between gap-4 py-8 md:flex-row">
-          <p className="text-xs font-light text-charcoal-400">
+        <div className="container-gisi flex flex-col items-center justify-between gap-4 py-8 md:flex-row">
+          <p className="text-xs font-light text-ink-400">
             &copy; 2026 GISI. All rights reserved. Built for generations.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-light text-charcoal-400">
-            <a href="#" className="transition-colors hover:text-white">Legal Notice</a>
-            <a href="#" className="transition-colors hover:text-white">Privacy Policy</a>
-            <a href="#" className="transition-colors hover:text-white">Terms of Use</a>
-            <a href="#" className="transition-colors hover:text-white">Accessibility</a>
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-light text-ink-400">
+            <a href="#" className="transition-colors duration-300 hover:text-white">Legal Notice</a>
+            <a href="#" className="transition-colors duration-300 hover:text-white">Privacy Policy</a>
+            <a href="#" className="transition-colors duration-300 hover:text-white">Terms of Use</a>
+            <a href="#" className="transition-colors duration-300 hover:text-white">Accessibility</a>
           </div>
         </div>
       </div>
