@@ -9,22 +9,21 @@ export function Heritage() {
   return (
     <>
       {/* Project Footprint */}
-      <section id="projects" className="bg-steel-950 py-24 md:py-32">
+      <section id="projects" className="bg-bone-50 py-24 md:py-32">
         <div className="container-gisi">
           <div
             ref={ref}
             className={`mb-16 max-w-3xl reveal ${visible ? 'is-visible' : ''}`}
           >
-            <p className="eyebrow mb-4">The GISI Footprint</p>
-            <h2 className="font-serif text-4xl font-medium leading-tight text-white md:text-5xl lg:text-6xl">
+            <p className="eyebrow mb-4">The Footprint</p>
+            <h2 className="font-serif text-4xl font-medium leading-tight text-ink-900 md:text-5xl lg:text-6xl">
               Projects built to
-              <span className="italic text-gold-400"> endure</span>
+              <span className="italic text-gold-600"> endure</span>
             </h2>
-            <p className="mt-6 text-lg font-light leading-relaxed text-ink-200">
-              Airports, dams, hospitals, universities, data centers. These
-              projects must last for generations. GISI's partner companies work
-              alongside clients to create infrastructure solutions that endure,
-              adapt, and improve the lives of the people who depend on them.
+            <p className="mt-6 text-lg font-light leading-relaxed text-ink-600">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris.
             </p>
           </div>
 
@@ -33,7 +32,7 @@ export function Heritage() {
             {footprintProjects.map((project, i) => (
               <article
                 key={project.title}
-                className={`group relative aspect-[4/3] overflow-hidden reveal ${
+                className={`group relative aspect-[4/3] overflow-hidden shadow-sm reveal ${
                   visible ? 'is-visible' : ''
                 }`}
                 style={{ transitionDelay: `${i * 80}ms` }}
@@ -43,19 +42,20 @@ export function Heritage() {
                   alt={project.title}
                   className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink-950/95 via-ink-950/20 to-transparent transition-opacity duration-500 group-hover:from-ink-950/98" />
+                {/* Dark overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/10 to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-95" />
 
-                {/* Category tag */}
-                <span className="absolute left-4 top-4 border border-white/20 bg-ink-950/60 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-widest text-gold-400 backdrop-blur-sm">
+                {/* Category tag — slides in from top */}
+                <span className="absolute left-4 top-4 translate-y-0 border border-white/20 bg-ink-950/50 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-widest text-gold-300 backdrop-blur-sm transition-all duration-500 group-hover:bg-gold-400 group-hover:text-ink-950">
                   {project.category}
                 </span>
 
-                {/* Content */}
+                {/* Content — slides up on hover */}
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <h3 className="font-serif text-xl font-medium text-white">
                     {project.title}
                   </h3>
-                  <p className="mt-1.5 text-xs font-light text-white/60">
+                  <p className="mt-1.5 max-h-0 overflow-hidden text-xs font-light text-white/70 opacity-0 transition-all duration-500 group-hover:max-h-20 group-hover:opacity-100">
                     {project.location}
                   </p>
                 </div>
@@ -66,16 +66,16 @@ export function Heritage() {
       </section>
 
       {/* Leader Testimonials */}
-      <section id="leaders" className="bg-ink-950 py-24 md:py-32">
+      <section id="leaders" className="bg-bone-100 py-24 md:py-32">
         <div className="container-gisi">
           <div
             ref={ref2}
             className={`mb-16 max-w-3xl reveal ${visible2 ? 'is-visible' : ''}`}
           >
-            <p className="eyebrow mb-4">What Our Business Leaders Are Saying</p>
-            <h2 className="font-serif text-4xl font-medium leading-tight text-white md:text-5xl lg:text-6xl">
+            <p className="eyebrow mb-4">What Our Leaders Are Saying</p>
+            <h2 className="font-serif text-4xl font-medium leading-tight text-ink-900 md:text-5xl lg:text-6xl">
               Voices from across
-              <span className="italic text-gold-400"> the enterprise</span>
+              <span className="italic text-gold-600"> the enterprise</span>
             </h2>
           </div>
 
@@ -84,19 +84,23 @@ export function Heritage() {
             {leaders.map((leader, i) => (
               <article
                 key={leader.name}
-                className={`group flex flex-col bg-ink-900 border border-white/5 p-8 transition-all duration-500 hover:border-gold-400/20 reveal ${
+                className={`group flex flex-col bg-white border border-ink-200/50 p-8 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-ink-900/10 reveal ${
                   visible2 ? 'is-visible' : ''
                 }`}
                 style={{ transitionDelay: `${i * 120}ms` }}
               >
-                <Quote size={32} strokeWidth={1.5} className="text-gold-400/60" />
-                <p className="mt-5 flex-1 text-base font-light leading-relaxed text-ink-100">
+                <Quote
+                  size={32}
+                  strokeWidth={1.5}
+                  className="text-gold-400 transition-colors duration-500 group-hover:text-gold-500"
+                />
+                <p className="mt-5 flex-1 text-base font-light leading-relaxed text-ink-700">
                   &ldquo;{leader.quote}&rdquo;
                 </p>
 
                 {/* Author */}
-                <div className="mt-8 flex items-center gap-4 border-t border-white/10 pt-6">
-                  <div className="h-14 w-14 overflow-hidden rounded-full">
+                <div className="mt-8 flex items-center gap-4 border-t border-ink-200/60 pt-6">
+                  <div className="h-14 w-14 overflow-hidden rounded-full ring-2 ring-gold-400/0 transition-all duration-500 group-hover:ring-gold-400/40">
                     <img
                       src={leader.image}
                       alt={leader.name}
@@ -104,13 +108,13 @@ export function Heritage() {
                     />
                   </div>
                   <div>
-                    <p className="font-serif text-lg font-medium text-white">
+                    <p className="font-serif text-lg font-medium text-ink-900">
                       {leader.name}
                     </p>
-                    <p className="text-[11px] font-semibold uppercase tracking-widest text-gold-400">
+                    <p className="text-[11px] font-semibold uppercase tracking-widest text-gold-600">
                       {leader.role}
                     </p>
-                    <p className="text-xs font-light text-ink-300">
+                    <p className="text-xs font-light text-ink-500">
                       {leader.company}
                     </p>
                   </div>

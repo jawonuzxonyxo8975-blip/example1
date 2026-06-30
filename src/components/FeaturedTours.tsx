@@ -6,7 +6,7 @@ export function FeaturedTours() {
   const { ref, visible } = useReveal<HTMLDivElement>();
 
   return (
-    <section id="business-groups" className="bg-ink-950 py-24 md:py-32">
+    <section id="business-groups" className="bg-bone-100 py-24 md:py-32">
       <div className="container-gisi">
         {/* Header */}
         <div
@@ -14,14 +14,13 @@ export function FeaturedTours() {
           className={`mb-16 max-w-3xl reveal ${visible ? 'is-visible' : ''}`}
         >
           <p className="eyebrow mb-4">Business Groups</p>
-          <h2 className="font-serif text-4xl font-medium leading-tight text-white md:text-5xl lg:text-6xl">
+          <h2 className="font-serif text-4xl font-medium leading-tight text-ink-900 md:text-5xl lg:text-6xl">
             A dynamic family of
-            <span className="italic text-gold-400"> companies</span>
+            <span className="italic text-gold-600"> divisions</span>
           </h2>
-          <p className="mt-6 text-lg font-light leading-relaxed text-ink-200">
-            GISI is a dynamic family of companies where our partners can work
-            together to serve clients more powerfully. Today we are represented
-            in two business groups.
+          <p className="mt-6 text-lg font-light leading-relaxed text-ink-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
 
@@ -30,7 +29,7 @@ export function FeaturedTours() {
           {businessGroups.map((group, i) => (
             <article
               key={group.name}
-              className={`group overflow-hidden bg-ink-900 border border-white/5 transition-all duration-500 hover:border-gold-400/30 reveal ${
+              className={`group overflow-hidden bg-white border border-ink-200/50 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-ink-900/10 reveal ${
                 visible ? 'is-visible' : ''
               }`}
               style={{ transitionDelay: `${i * 150}ms` }}
@@ -42,10 +41,10 @@ export function FeaturedTours() {
                   alt={group.name}
                   className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/30 to-transparent" />
-                {/* Project caption overlay */}
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-[10px] font-medium uppercase tracking-widest text-white/70">
+                <div className="absolute inset-0 bg-gradient-to-t from-ink-950/50 via-transparent to-transparent" />
+                {/* Project caption overlay — slides up on hover */}
+                <div className="absolute inset-x-0 bottom-0 translate-y-2 p-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                  <p className="text-[10px] font-medium uppercase tracking-widest text-white/90">
                     {group.projectCaption}
                   </p>
                 </div>
@@ -53,10 +52,10 @@ export function FeaturedTours() {
 
               {/* Body */}
               <div className="p-8 md:p-10">
-                <h3 className="font-serif text-3xl font-medium text-white md:text-4xl">
+                <h3 className="font-serif text-3xl font-medium text-ink-900 md:text-4xl">
                   {group.name}
                 </h3>
-                <p className="mt-4 text-base font-light leading-relaxed text-ink-200">
+                <p className="mt-4 text-base font-light leading-relaxed text-ink-600">
                   {group.description}
                 </p>
                 <a href={group.link} className="link-arrow mt-6">

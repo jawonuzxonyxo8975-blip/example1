@@ -1,9 +1,9 @@
 import { Building2, MapPin, Mail, Phone, Linkedin, Twitter, Facebook } from 'lucide-react';
 
 const footerLinks = {
-  Company: ['Who We Are', 'The GISI Model', 'Our History', 'Careers', 'News', 'Contact'],
-  'Business Groups': ['STO Building Group', 'GISI Consulting Group', 'Partner Companies', 'Our Services', 'Markets'],
-  'What We Do': ['Construction Services', 'Project Management', 'Engineering Consulting', 'Infrastructure', 'Sustainability'],
+  Company: ['About Us', 'Our Model', 'History', 'Careers', 'News', 'Contact'],
+  Divisions: ['Division One', 'Division Two', 'Partner Companies', 'Services', 'Markets'],
+  'What We Do': ['Service One', 'Service Two', 'Service Three', 'Infrastructure', 'Sustainability'],
   Resources: ['Projects', 'Leaders', 'Investors', 'Legal Notice', 'Privacy Policy'],
 };
 
@@ -15,7 +15,7 @@ const social = [
 
 export function Footer() {
   return (
-    <footer className="bg-ink-950 text-white">
+    <footer className="bg-ink-900 text-bone-100">
       {/* Top: links */}
       <div className="container-gisi py-16 md:py-20">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-6">
@@ -23,23 +23,22 @@ export function Footer() {
           <div className="col-span-2 lg:col-span-2">
             <div className="flex items-center gap-3">
               <Building2 size={28} strokeWidth={2} className="text-gold-400" />
-              <span className="text-3xl font-bold tracking-tight">GISI</span>
+              <span className="text-3xl font-bold tracking-tight text-white">LOGO</span>
             </div>
-            <p className="mt-4 max-w-xs text-sm font-light leading-relaxed text-ink-300">
-              Uniting successful companies in construction services, project
-              management, and engineering consulting to build long-term value
-              together.
+            <p className="mt-4 max-w-xs text-sm font-light leading-relaxed text-bone-300">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
 
             {/* Contact */}
-            <div className="mt-6 space-y-2.5 text-sm font-light text-ink-300">
+            <div className="mt-6 space-y-2.5 text-sm font-light text-bone-300">
               <p className="flex items-center gap-2">
                 <MapPin size={14} className="text-gold-400" />
                 Global Headquarters
               </p>
               <p className="flex items-center gap-2">
                 <Mail size={14} className="text-gold-400" />
-                info@gisi.com
+                info@example.com
               </p>
               <p className="flex items-center gap-2">
                 <Phone size={14} className="text-gold-400" />
@@ -55,7 +54,7 @@ export function Footer() {
                     key={s.label}
                     href="#"
                     aria-label={s.label}
-                    className="flex h-9 w-9 items-center justify-center border border-white/20 text-white/70 transition-all duration-300 hover:border-gold-400 hover:text-gold-400"
+                    className="flex h-9 w-9 items-center justify-center border border-white/20 text-white/70 transition-all duration-300 hover:border-gold-400 hover:bg-gold-400 hover:text-ink-900"
                   >
                     <Icon size={16} />
                   </a>
@@ -75,7 +74,7 @@ export function Footer() {
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-sm font-light text-ink-300 transition-colors duration-300 hover:text-white"
+                      className="text-sm font-light text-bone-300 transition-colors duration-300 hover:text-white"
                     >
                       {link}
                     </a>
@@ -90,10 +89,10 @@ export function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="container-gisi flex flex-col items-center justify-between gap-4 py-8 md:flex-row">
-          <p className="text-xs font-light text-ink-400">
-            &copy; 2026 GISI. All rights reserved. Built for generations.
+          <p className="text-xs font-light text-bone-400">
+            &copy; 2026 LOGO. All rights reserved.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-light text-ink-400">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-light text-bone-400">
             <a href="#" className="transition-colors duration-300 hover:text-white">Legal Notice</a>
             <a href="#" className="transition-colors duration-300 hover:text-white">Privacy Policy</a>
             <a href="#" className="transition-colors duration-300 hover:text-white">Terms of Use</a>

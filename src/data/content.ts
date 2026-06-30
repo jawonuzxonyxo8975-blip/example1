@@ -36,33 +36,33 @@ export interface Leader {
 }
 
 export const heroProject: Project = {
-  title: 'Texas Data Center',
-  location: 'Construction Services | STO Mission Critical',
-  category: 'Data Centers',
+  title: 'Featured Project',
+  location: 'Category | Division',
+  category: 'Showcase',
   image: 'https://images.pexels.com/photos/802024/pexels-photo-802024.jpeg?auto=compress&cs=tinysrgb&w=2400',
 };
 
 export const valuePillars: ValuePillar[] = [
   {
-    title: 'Legacy',
+    title: 'Heritage',
     description:
-      'GISI was established by veteran engineers and industry experts. Our merger partnerships are rooted in shared values and long-term alignment, while honoring the legacies that made them exceptional.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
     image: 'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1600',
     link: '#',
-    linkLabel: 'Our History',
+    linkLabel: 'Learn More',
   },
   {
-    title: 'Collaboration',
+    title: 'Partnership',
     description:
-      'Drawing on a wealth of shared expertise and collaboration, the management of our companies are empowered to deliver broader services, explore new markets, and expand employee career opportunities — a pillar of the GISI model.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
     image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1600',
     link: '#',
-    linkLabel: 'Our Model',
+    linkLabel: 'Learn More',
   },
   {
-    title: 'Employee Ownership',
+    title: 'Ownership',
     description:
-      'GISI was founded on the belief that we could do much more through the power of shared employee ownership. At every level, our people are empowered to think and act like owners — driven by accountability, craft, and pride in their work.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
     image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1600',
     link: '#',
     linkLabel: 'Learn More',
@@ -70,93 +70,93 @@ export const valuePillars: ValuePillar[] = [
 ];
 
 export const stats: Stat[] = [
-  { value: '$1B+', label: '2025 Annual Revenue' },
+  { value: '$1B+', label: 'Annual Revenue' },
   { value: '30+', label: 'Operating Companies' },
   { value: '12K+', label: 'Global Employees' },
-  { value: '20%+', label: 'Average Annual Total Shareholder Return', sublabel: 'Since Inception*' },
+  { value: '20%+', label: 'Average Annual Return', sublabel: 'Since Inception*' },
 ];
 
 export const businessGroups: BusinessGroup[] = [
   {
-    name: 'STO Building Group',
+    name: 'Division One',
     description:
-      'One of the largest privately held construction service firms, providing services to a diversified group of clients in a variety of end-markets throughout North America, Ireland, United Kingdom, and the Netherlands.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     image: 'https://images.pexels.com/photos/933984/pexels-photo-933984.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    projectCaption: 'Ray Nashville, 32-Story Mixed Use Tower — Construction Services | Layton',
+    projectCaption: 'Featured Project — Category | Division',
     link: '#',
   },
   {
-    name: 'GISI Consulting Group',
+    name: 'Division Two',
     description:
-      'One of the top 10 global providers of project management and engineering consulting, delivering services worldwide in infrastructure & mobility, earth & water, and government & society for private and public sector clients.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     image: 'https://images.pexels.com/photos/356736/pexels-photo-356736.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    projectCaption: 'Patricia and Phillip Frost Museum of Science — Project Management | Hill Intl.',
+    projectCaption: 'Featured Project — Category | Division',
     link: '#',
   },
 ];
 
 export const footprintProjects: Project[] = [
   {
-    title: 'Medical City Heart Hospital',
-    location: 'Dallas, TX — Construction Services | Layton',
-    category: 'Healthcare',
+    title: 'Project Alpha',
+    location: 'Location — Category | Division',
+    category: 'Category One',
     image: 'https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
-    title: 'Oroville Spillway Recovery',
-    location: 'California — Project Management, Civil, Geotech | GEI',
-    category: 'Infrastructure',
+    title: 'Project Beta',
+    location: 'Location — Category | Division',
+    category: 'Category Two',
     image: 'https://images.pexels.com/photos/2478248/pexels-photo-2478248.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
-    title: 'Ray Nashville Tower',
-    location: 'Nashville, TN — 32-Story Mixed Use | Layton',
-    category: 'Commercial',
+    title: 'Project Gamma',
+    location: 'Location — Category | Division',
+    category: 'Category Three',
     image: 'https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
-    title: 'Frost Museum of Science',
-    location: 'Miami, FL — Project Management | Hill Intl.',
-    category: 'Cultural',
+    title: 'Project Delta',
+    location: 'Location — Category | Division',
+    category: 'Category Four',
     image: 'https://images.pexels.com/photos/260946/pexels-photo-260946.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
-    title: 'Airport Terminal Expansion',
-    location: 'International — Consulting Group',
-    category: 'Transportation',
+    title: 'Project Epsilon',
+    location: 'Location — Category | Division',
+    category: 'Category Five',
     image: 'https://images.pexels.com/photos/461482/pexels-photo-461482.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
-    title: 'University Campus',
-    location: 'North America — Construction Services',
-    category: 'Education',
+    title: 'Project Zeta',
+    location: 'Location — Category | Division',
+    category: 'Category Six',
     image: 'https://images.pexels.com/photos/207684/pexels-photo-207684.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
 ];
 
 export const leaders: Leader[] = [
   {
-    name: 'Rich Cavallaro',
-    role: 'CEO',
-    company: 'LiRo-Hill',
+    name: 'Jane Doe',
+    role: 'Chief Executive Officer',
+    company: 'Company One',
     quote:
-      "GISI's model and focus on employee ownership provides staff the opportunity to think and act long-term as they serve clients in delivering essential projects.",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
-    name: 'Dave Layton',
-    role: 'CEO',
-    company: 'Layton Construction',
+    name: 'John Smith',
+    role: 'Chief Executive Officer',
+    company: 'Company Two',
     quote:
-      "Being part of GISI allows Layton to take on larger, more complex projects while giving our employees greater opportunity to share in the success they help create, all while staying true to the culture that defines us.",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
-    name: 'Scott Wallington',
-    role: 'CEO',
-    company: 'GEI Consultants',
+    name: 'Sarah Lee',
+    role: 'Chief Executive Officer',
+    company: 'Company Three',
     quote:
-      "A partnership between GISI and GEI was the natural next step to ensure the multi-generational legacy our leadership has built.",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     image: 'https://images.pexels.com/photos/374820/pexels-photo-374820.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
 ];

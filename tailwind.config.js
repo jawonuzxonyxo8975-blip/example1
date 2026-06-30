@@ -4,33 +4,33 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Deep corporate navy/charcoal — primary dark backgrounds
-        ink: {
-          50: '#f4f5f7',
-          100: '#e6e8ec',
-          200: '#c9cdd6',
-          300: '#a4abb8',
-          400: '#737c8f',
-          500: '#525c70',
-          600: '#3d4658',
-          700: '#2b3245',
-          800: '#1c2233',
-          900: '#121726',
-          950: '#0a0e1a',
+        // Warm light neutrals — primary light backgrounds
+        bone: {
+          50: '#fdfcfa',
+          100: '#f7f4ef',
+          200: '#ede8e0',
+          300: '#ddd5c8',
+          400: '#c4b9a6',
+          500: '#a89a82',
+          600: '#877961',
+          700: '#6b5f4c',
+          800: '#4a4234',
+          900: '#2e2920',
+          950: '#1a1712',
         },
-        // Steel blue — secondary surfaces
-        steel: {
-          50: '#eef2f6',
-          100: '#d5dee8',
-          200: '#aabdd0',
-          300: '#7a96b3',
-          400: '#527598',
-          500: '#3a5d7e',
-          600: '#2e4a66',
-          700: '#263d54',
-          800: '#1f3245',
-          900: '#172635',
-          950: '#0f1a26',
+        // Charcoal — text and dark accents
+        ink: {
+          50: '#f5f5f4',
+          100: '#e7e5e3',
+          200: '#d1cec9',
+          300: '#a8a39c',
+          400: '#7a746b',
+          500: '#5c554b',
+          600: '#463f36',
+          700: '#342f27',
+          800: '#221e18',
+          900: '#15120e',
+          950: '#0c0a07',
         },
         // Gold/amber — accent highlights
         gold: {
@@ -55,10 +55,11 @@ export default {
         ultra: '0.35em',
       },
       animation: {
-        'fade-up': 'fadeUp 0.9s ease-out forwards',
+        'fade-up': 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) forwards',
         'fade-in': 'fadeIn 1.2s ease-out forwards',
         'slow-zoom': 'slowZoom 22s ease-out forwards',
-        'marquee': 'marquee 40s linear infinite',
+        'slide-down': 'slideDown 0.4s cubic-bezier(0.16,1,0.3,1) forwards',
+        'count-up': 'countUp 1.8s ease-out forwards',
       },
       keyframes: {
         fadeUp: {
@@ -73,9 +74,13 @@ export default {
           '0%': { transform: 'scale(1)' },
           '100%': { transform: 'scale(1.1)' },
         },
-        marquee: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
+        slideDown: {
+          '0%': { opacity: '0', transform: 'translateY(-12px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        countUp: {
+          '0%': { opacity: '0', transform: 'translateY(16px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
     },

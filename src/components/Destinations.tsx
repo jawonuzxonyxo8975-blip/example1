@@ -6,7 +6,7 @@ export function Destinations() {
   const { ref, visible } = useReveal<HTMLDivElement>();
 
   return (
-    <section id="who-we-are" className="bg-ink-950 py-24 md:py-32">
+    <section id="who-we-are" className="bg-bone-50 py-24 md:py-32">
       <div className="container-gisi">
         {/* Who we are intro */}
         <div
@@ -14,25 +14,23 @@ export function Destinations() {
           className={`mb-20 max-w-4xl reveal ${visible ? 'is-visible' : ''}`}
         >
           <p className="eyebrow mb-4">Who We Are</p>
-          <h2 className="font-serif text-4xl font-medium leading-tight text-white md:text-5xl lg:text-6xl">
-            Uniting successful companies to
-            <span className="italic text-gold-400"> build long-term value</span>
+          <h2 className="font-serif text-4xl font-medium leading-tight text-ink-900 md:text-5xl lg:text-6xl">
+            Uniting excellence to
+            <span className="italic text-gold-600"> build lasting value</span>
           </h2>
-          <p className="mt-6 text-lg font-light leading-relaxed text-ink-200">
-            GISI unites successful companies in construction services, project
-            management, and engineering consulting to build long-term value
-            together. With access to greater opportunities, innovation, and
-            capital, our partner companies collaborate across a thriving
-            ecosystem that's built to better serve our clients, strengthen our
-            careers, and enrich our communities.
+          <p className="mt-6 text-lg font-light leading-relaxed text-ink-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
           </p>
         </div>
 
-        {/* The GISI Difference header */}
+        {/* The Difference header */}
         <div id="difference" className="mb-12 scroll-mt-24">
-          <p className="eyebrow mb-4">The GISI Difference</p>
-          <h3 className="font-serif text-3xl font-medium text-white md:text-4xl">
-            Legacy, collaboration, and employee ownership
+          <p className="eyebrow mb-4">The Difference</p>
+          <h3 className="font-serif text-3xl font-medium text-ink-900 md:text-4xl">
+            Heritage, partnership, and ownership
           </h3>
         </div>
 
@@ -41,7 +39,7 @@ export function Destinations() {
           {valuePillars.map((pillar, i) => (
             <article
               key={pillar.title}
-              className={`group flex flex-col overflow-hidden bg-ink-900 border border-white/5 transition-all duration-500 hover:border-gold-400/20 reveal ${
+              className={`group flex flex-col overflow-hidden bg-white border border-ink-200/50 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-ink-900/10 reveal ${
                 visible ? 'is-visible' : ''
               }`}
               style={{ transitionDelay: `${i * 120}ms` }}
@@ -53,7 +51,7 @@ export function Destinations() {
                   alt={pillar.title}
                   className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink-950/60 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 p-6">
                   <h4 className="font-serif text-3xl font-medium text-white">
                     {pillar.title}
@@ -63,7 +61,7 @@ export function Destinations() {
 
               {/* Body */}
               <div className="flex flex-1 flex-col p-6">
-                <p className="flex-1 text-sm font-light leading-relaxed text-ink-200">
+                <p className="flex-1 text-sm font-light leading-relaxed text-ink-600">
                   {pillar.description}
                 </p>
                 <a href={pillar.link} className="link-arrow mt-5">
