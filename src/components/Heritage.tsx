@@ -1,100 +1,121 @@
+import { ArrowRight, Quote } from 'lucide-react';
+import { footprintProjects, leaders } from '../data/content';
 import { useReveal } from '../hooks/useReveal';
-import { yachtSpecs, pressFeatures } from '../data/content';
 
 export function Heritage() {
   const { ref, visible } = useReveal<HTMLDivElement>();
+  const { ref: ref2, visible: visible2 } = useReveal<HTMLDivElement>();
 
   return (
     <>
-      {/* Yacht specs section */}
-      <section id="about" className="relative overflow-hidden bg-ocean-900 py-24 md:py-32">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.pexels.com/photos/3601425/pexels-photo-3601425.jpeg?auto=compress&cs=tinysrgb&w=2400"
-            alt=""
-            className="h-full w-full object-cover opacity-15"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-ocean-950 via-ocean-950/90 to-ocean-950/50" />
-        </div>
-
-        <div className="container-lux relative z-10">
+      {/* Project Footprint */}
+      <section id="projects" className="bg-steel-950 py-24 md:py-32">
+        <div className="container-corp">
           <div
             ref={ref}
-            className={`grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-20 reveal ${
-              visible ? 'is-visible' : ''
-            }`}
+            className={`mb-16 max-w-3xl reveal ${visible ? 'is-visible' : ''}`}
           >
-            {/* Left: text */}
-            <div>
-              <p className="eyebrow mb-4">A family affair</p>
-              <h2 className="font-serif text-4xl font-medium leading-tight text-white md:text-5xl lg:text-6xl">
-                An experienced crew,
-                <span className="italic text-coral-400"> a second home</span>
-              </h2>
-              <div className="mt-6 space-y-5 text-lg font-light leading-relaxed text-white/75">
-                <p>
-                  Kudanil Explorer is more than a vessel — she is a family-run
-                  expedition yacht where every crew member knows your name, your
-                  preferences, and the secret corners of the archipelago.
-                </p>
-                <p>
-                  Originally built as an offshore supply ship, she was refitted
-                  into a go-anywhere luxury explorer, combining steel-hull
-                  stability with the warmth of a private lodge on the water.
-                </p>
-              </div>
-              <a
-                href="#"
-                className="mt-8 inline-flex items-center gap-2 border-b border-coral-400 pb-1 text-xs font-semibold uppercase tracking-widest text-coral-300 transition-colors hover:text-coral-200"
-              >
-                Our Story
-              </a>
-            </div>
+            <p className="eyebrow mb-4">The Footprint</p>
+            <h2 className="font-serif text-4xl font-medium leading-tight text-white md:text-5xl lg:text-6xl">
+              Projects built to
+              <span className="italic text-amber-400"> endure</span>
+            </h2>
+            <p className="mt-6 text-lg font-light leading-relaxed text-charcoal-200">
+              Airports, dams, hospitals, universities, data centers. These
+              projects must last for generations. Our partner companies work
+              alongside clients to create infrastructure solutions that endure,
+              adapt, and improve the lives of the people who depend on them.
+            </p>
+          </div>
 
-            {/* Right: specs */}
-            <div className="grid grid-cols-2 gap-px bg-white/10">
-              {yachtSpecs.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="bg-ocean-950/70 p-8 text-center backdrop-blur-sm transition-colors hover:bg-ocean-900/70 md:p-10"
-                >
-                  <p className="font-serif text-4xl font-medium text-coral-300 md:text-5xl">
-                    {stat.value}
-                  </p>
-                  <p className="mt-2 text-xs font-medium uppercase tracking-widest text-white/60">
-                    {stat.label}
+          {/* Project grid */}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {footprintProjects.map((project, i) => (
+              <article
+                key={project.title}
+                className={`group relative aspect-[4/3] overflow-hidden reveal ${
+                  visible ? 'is-visible' : ''
+                }`}
+                style={{ transitionDelay: `${i * 80}ms` }}
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/95 via-charcoal-950/20 to-transparent transition-opacity duration-500 group-hover:from-charcoal-950/98" />
+
+                {/* Category tag */}
+                <span className="absolute left-4 top-4 border border-white/20 bg-charcoal-950/60 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-widest text-amber-400 backdrop-blur-sm">
+                  {project.category}
+                </span>
+
+                {/* Content */}
+                <div className="absolute inset-x-0 bottom-0 p-6">
+                  <h3 className="font-serif text-xl font-medium text-white">
+                    {project.title}
+                  </h3>
+                  <p className="mt-1.5 text-xs font-light text-white/60">
+                    {project.location}
                   </p>
                 </div>
-              ))}
-            </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Press section */}
-      <section id="press" className="bg-ocean-950 py-20 md:py-28">
-        <div className="container-lux">
-          <div className="mb-12 text-center">
-            <p className="eyebrow mb-3">As Seen In</p>
-            <h2 className="font-serif text-3xl font-medium text-white md:text-4xl">
-              Featured in the world's finest publications
+      {/* Leader Testimonials */}
+      <section id="leaders" className="bg-charcoal-950 py-24 md:py-32">
+        <div className="container-corp">
+          <div
+            ref={ref2}
+            className={`mb-16 max-w-3xl reveal ${visible2 ? 'is-visible' : ''}`}
+          >
+            <p className="eyebrow mb-4">What Our Leaders Are Saying</p>
+            <h2 className="font-serif text-4xl font-medium leading-tight text-white md:text-5xl lg:text-6xl">
+              Voices from across
+              <span className="italic text-amber-400"> the enterprise</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
-            {pressFeatures.map((press) => (
-              <a
-                key={press.publication}
-                href="#"
-                className="group flex flex-col gap-3 bg-ocean-950 p-8 transition-colors hover:bg-ocean-900"
+          {/* Leader cards */}
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            {leaders.map((leader, i) => (
+              <article
+                key={leader.name}
+                className={`group flex flex-col bg-charcoal-900 border border-white/5 p-8 transition-all duration-500 hover:border-amber-400/20 reveal ${
+                  visible2 ? 'is-visible' : ''
+                }`}
+                style={{ transitionDelay: `${i * 120}ms` }}
               >
-                <p className="font-serif text-xl font-medium text-coral-400">
-                  {press.publication}
+                <Quote size={32} strokeWidth={1.5} className="text-amber-400/60" />
+                <p className="mt-5 flex-1 text-base font-light leading-relaxed text-charcoal-100">
+                  "{leader.quote}"
                 </p>
-                <p className="text-sm font-light leading-relaxed text-white/70 transition-colors group-hover:text-white/90">
-                  {press.title}
-                </p>
-              </a>
+
+                {/* Author */}
+                <div className="mt-8 flex items-center gap-4 border-t border-white/10 pt-6">
+                  <div className="h-14 w-14 overflow-hidden rounded-full">
+                    <img
+                      src={leader.image}
+                      alt={leader.name}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-serif text-lg font-medium text-white">
+                      {leader.name}
+                    </p>
+                    <p className="text-xs font-semibold uppercase tracking-widest text-amber-400">
+                      {leader.role}
+                    </p>
+                    <p className="text-xs font-light text-charcoal-300">
+                      {leader.company}
+                    </p>
+                  </div>
+                </div>
+              </article>
             ))}
           </div>
         </div>

@@ -1,51 +1,49 @@
-import { Facebook, Instagram, Twitter, Youtube, Anchor, MapPin, Mail, Phone } from 'lucide-react';
+import { Building2, MapPin, Mail, Phone, Linkedin, Twitter, Facebook } from 'lucide-react';
 
 const footerLinks = {
-  Destinations: ['Raja Ampat & Papua', 'Beyond Komodo', 'Banda & Spice Islands', 'Mentawai Islands', 'Forgotten Islands', 'Triton Bay'],
-  Expeditions: ['Private Charters', 'Scheduled Voyages', 'Diving Expeditions', 'Surf Expeditions', 'Custom Itineraries'],
-  'The Yacht': ['Suites & Cabins', 'Dining', 'Activities & Toys', 'The Crew', 'Specifications', 'Sustainability'],
-  'About': ['Our Story', 'Journals', 'Press', 'FAQs', 'Contact', 'Careers'],
+  Company: ['Who We Are', 'The GISI Model', 'Our History', 'Careers', 'News', 'Contact'],
+  'Business Groups': ['STO Building Group', 'GISI Consulting Group', 'Partner Companies', 'Our Services', 'Markets'],
+  'What We Do': ['Construction Services', 'Project Management', 'Engineering Consulting', 'Infrastructure', 'Sustainability'],
+  Resources: ['Projects', 'Leaders', 'Investors', 'Legal Notice', 'Privacy Policy'],
 };
 
 const social = [
-  { icon: Facebook, label: 'Facebook' },
-  { icon: Instagram, label: 'Instagram' },
+  { icon: Linkedin, label: 'LinkedIn' },
   { icon: Twitter, label: 'Twitter' },
-  { icon: Youtube, label: 'YouTube' },
+  { icon: Facebook, label: 'Facebook' },
 ];
 
 export function Footer() {
   return (
-    <footer className="bg-ocean-950 text-white">
+    <footer className="bg-charcoal-950 text-white">
       {/* Top: links */}
-      <div className="container-lux py-16 md:py-20">
+      <div className="container-corp py-16 md:py-20">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-6">
           {/* Brand */}
           <div className="col-span-2 lg:col-span-2">
-            <div className="flex items-center gap-2">
-              <Anchor size={24} strokeWidth={1.5} className="text-coral-400" />
-              <span className="font-serif text-3xl font-medium tracking-wide">
-                Kudanil <span className="text-coral-400">Explorer</span>
-              </span>
+            <div className="flex items-center gap-2.5">
+              <Building2 size={26} strokeWidth={2} className="text-amber-400" />
+              <span className="text-3xl font-bold tracking-tight">GISI</span>
             </div>
-            <p className="mt-4 max-w-xs text-sm font-light leading-relaxed text-white/60">
-              A 50-metre luxury expedition yacht offering bespoke voyages across
-              the remote islands of Indonesia.
+            <p className="mt-4 max-w-xs text-sm font-light leading-relaxed text-charcoal-300">
+              Uniting successful companies in construction services, project
+              management, and engineering consulting to build long-term value
+              together.
             </p>
 
             {/* Contact */}
-            <div className="mt-6 space-y-2.5 text-sm font-light text-white/60">
+            <div className="mt-6 space-y-2.5 text-sm font-light text-charcoal-300">
               <p className="flex items-center gap-2">
-                <MapPin size={14} className="text-coral-400" />
-                Jakarta, Indonesia
+                <MapPin size={14} className="text-amber-400" />
+                Global Headquarters
               </p>
               <p className="flex items-center gap-2">
-                <Mail size={14} className="text-coral-400" />
-                charter@kudanil.com
+                <Mail size={14} className="text-amber-400" />
+                info@gisi.com
               </p>
               <p className="flex items-center gap-2">
-                <Phone size={14} className="text-coral-400" />
-                +62 21 555 0188
+                <Phone size={14} className="text-amber-400" />
+                +1 (000) 555-0100
               </p>
             </div>
 
@@ -57,7 +55,7 @@ export function Footer() {
                     key={s.label}
                     href="#"
                     aria-label={s.label}
-                    className="flex h-9 w-9 items-center justify-center border border-white/20 text-white/70 transition-all duration-300 hover:border-coral-400 hover:text-coral-400"
+                    className="flex h-9 w-9 items-center justify-center border border-white/20 text-white/70 transition-all duration-300 hover:border-amber-400 hover:text-amber-400"
                   >
                     <Icon size={16} />
                   </a>
@@ -69,7 +67,7 @@ export function Footer() {
           {/* Link columns */}
           {Object.entries(footerLinks).map(([heading, links]) => (
             <div key={heading}>
-              <h4 className="mb-4 text-xs font-semibold uppercase tracking-widest text-coral-400">
+              <h4 className="mb-4 text-xs font-semibold uppercase tracking-widest text-amber-400">
                 {heading}
               </h4>
               <ul className="space-y-2.5">
@@ -77,7 +75,7 @@ export function Footer() {
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-sm font-light text-white/60 transition-colors hover:text-white"
+                      className="text-sm font-light text-charcoal-300 transition-colors hover:text-white"
                     >
                       {link}
                     </a>
@@ -89,21 +87,18 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Awards bar */}
+      {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="container-lux flex flex-col items-center justify-between gap-6 py-8 md:flex-row">
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-medium uppercase tracking-widest text-white/40">
-            <span>IMC Certified</span>
-            <span className="h-3 w-px bg-white/20" />
-            <span>RINA Class</span>
-            <span className="h-3 w-px bg-white/20" />
-            <span>Indonesian Flagged</span>
-            <span className="h-3 w-px bg-white/20" />
-            <span>Award Winning</span>
-          </div>
-          <p className="text-xs font-light text-white/40">
-            &copy; 2026 Kudanil Explorer. All rights reserved.
+        <div className="container-corp flex flex-col items-center justify-between gap-4 py-8 md:flex-row">
+          <p className="text-xs font-light text-charcoal-400">
+            &copy; 2026 GISI. All rights reserved. Built for generations.
           </p>
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-light text-charcoal-400">
+            <a href="#" className="transition-colors hover:text-white">Legal Notice</a>
+            <a href="#" className="transition-colors hover:text-white">Privacy Policy</a>
+            <a href="#" className="transition-colors hover:text-white">Terms of Use</a>
+            <a href="#" className="transition-colors hover:text-white">Accessibility</a>
+          </div>
         </div>
       </div>
     </footer>

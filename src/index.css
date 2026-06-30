@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,25 +9,25 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-ocean-950 text-ocean-50 font-sans antialiased;
+    @apply bg-charcoal-950 text-charcoal-100 font-sans antialiased;
   }
 }
 
 @layer components {
-  .container-lux {
+  .container-corp {
     @apply mx-auto max-w-[1400px] px-6 md:px-10 lg:px-16;
   }
   .eyebrow {
-    @apply text-xs font-medium uppercase tracking-widest text-coral-400;
+    @apply text-xs font-semibold uppercase tracking-widest text-amber-400;
   }
-  .btn-coral {
-    @apply inline-flex items-center justify-center gap-2 border border-coral-500 bg-coral-500 px-8 py-3.5 text-xs font-semibold uppercase tracking-widest text-white transition-all duration-300 hover:bg-transparent hover:text-coral-400;
+  .btn-amber {
+    @apply inline-flex items-center justify-center gap-2 bg-amber-400 px-8 py-3.5 text-xs font-bold uppercase tracking-widest text-charcoal-950 transition-all duration-300 hover:bg-amber-300;
   }
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 border border-white/40 px-8 py-3.5 text-xs font-semibold uppercase tracking-widest text-white transition-all duration-300 hover:bg-white hover:text-ocean-950;
+    @apply inline-flex items-center justify-center gap-2 border border-white/30 px-8 py-3.5 text-xs font-bold uppercase tracking-widest text-white transition-all duration-300 hover:bg-white hover:text-charcoal-950;
   }
-  .link-underline {
-    @apply relative inline-block after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-coral-400 after:transition-all after:duration-300 hover:after:w-full;
+  .link-arrow {
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amber-400 transition-colors hover:text-amber-300;
   }
 }
 
@@ -46,9 +46,9 @@
 }
 @keyframes slowZoom {
   from { transform: scale(1); }
-  to { transform: scale(1.12); }
+  to { transform: scale(1.1); }
 }
 
-.text-shadow-lux {
-  text-shadow: 0 2px 20px rgba(8, 24, 32, 0.5);
+.text-shadow-corp {
+  text-shadow: 0 2px 24px rgba(15, 19, 27, 0.6);
 }
