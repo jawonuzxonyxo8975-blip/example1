@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight, ChevronDown } from 'lucide-react';
-import { heroProject } from '../data/content';
+import { ArrowRight, Play, ChevronDown } from 'lucide-react';
+import { heroContent } from '../data/content';
 
 export function Hero() {
   const [scrollY, setScrollY] = useState(0);
@@ -16,70 +16,83 @@ export function Hero() {
       {/* Background image with parallax + slow zoom */}
       <div
         className="parallax absolute inset-0"
-        style={{ transform: `translateY(${scrollY * 0.4}px)` }}
+        style={{ transform: `translateY(${scrollY * 0.35}px)` }}
       >
         <img
-          src={heroProject.image}
-          alt={heroProject.title}
+          src={heroContent.image}
+          alt="Family portrait"
           className="hero-zoom h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink-950/50 via-ink-950/20 to-ink-950/70" />
+        {/* Film-grain overlay effect */}
+        <div className="absolute inset-0 bg-gradient-to-b from-ink-950/30 via-ink-950/10 to-ink-950/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/40 via-transparent to-ink-950/30" />
+        {/* Subtle warmth overlay */}
+        <div className="absolute inset-0 bg-gold-900/5 mix-blend-overlay" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
         <p
-          className="eyebrow mb-6 animate-fade-in opacity-0 !text-gold-300"
-          style={{ animationDelay: '0.3s' }}
+          className="eyebrow mb-8 animate-fade-in opacity-0"
+          style={{ animationDelay: '0.3s', letterSpacing: '0.3em' }}
         >
-          Excellence · Innovation · Partnership
+          {heroContent.tagline}
         </p>
         <h1
-          className="max-w-5xl font-serif text-5xl font-medium leading-[1.05] text-white animate-fade-up opacity-0 md:text-7xl lg:text-8xl"
-          style={{ animationDelay: '0.5s', textShadow: '0 2px 30px rgba(0,0,0,0.4)' }}
+          className="max-w-5xl font-serif text-5xl font-light leading-[1.05] text-white animate-fade-up opacity-0 md:text-7xl lg:text-8xl"
+          style={{ animationDelay: '0.5s', textShadow: '0 4px 40px rgba(0,0,0,0.5)' }}
         >
-          Build for
+          {heroContent.title}
           <br />
-          <span className="italic text-gold-300">excellence.</span>
+          <span className="italic text-gold-200">{heroContent.titleAccent}</span>
         </h1>
         <p
-          className="mt-8 max-w-2xl text-lg font-light leading-relaxed text-white/90 animate-fade-up opacity-0 md:text-xl"
+          className="mt-8 max-w-2xl text-base font-light leading-relaxed text-white/85 animate-fade-up opacity-0 md:text-lg"
           style={{ animationDelay: '0.8s' }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          {heroContent.subtitle}
         </p>
         <div
-          className="mt-10 flex flex-col items-center gap-4 animate-fade-up opacity-0 sm:flex-row sm:gap-6"
+          className="mt-12 flex flex-col items-center gap-4 animate-fade-up opacity-0 sm:flex-row sm:gap-6"
           style={{ animationDelay: '1.1s' }}
         >
-          <a href="#who-we-are" className="btn-gold">
-            Discover More
-            <ArrowRight size={16} />
+          <a
+            href="#create"
+            className="group inline-flex items-center justify-center gap-3 bg-white px-10 py-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-ink-900 transition-all duration-500 hover:bg-gold-100 hover:shadow-xl hover:shadow-gold-400/20"
+          >
+            {heroContent.cta}
+            <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
           </a>
-          <a href="#business-groups" className="btn-outline !border-white/40 !text-white hover:!bg-white hover:!text-ink-900">
-            Our Divisions
-          </a>
+          <button
+            className="group inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors duration-300 hover:text-gold-200"
+          >
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 transition-all duration-300 group-hover:border-gold-300 group-hover:bg-gold-300/10">
+              <Play size={14} className="ml-0.5" />
+            </span>
+            {heroContent.ctaSecondary}
+          </button>
         </div>
       </div>
 
-      {/* Project caption + scroll indicator */}
+      {/* Caption + scroll indicator */}
       <div
         className="absolute bottom-8 left-0 right-0 z-10 animate-fade-in opacity-0"
         style={{ animationDelay: '1.4s' }}
       >
-        <div className="container-gisi flex items-center justify-between">
-          <div className="flex items-center gap-3 text-white/70">
-            <div className="h-px w-10 bg-gold-400" />
-            <p className="text-[11px] font-medium uppercase tracking-widest">
-              {heroProject.title} — {heroProject.location}
-            </p>
-          </div>
-          <div className="hidden items-center gap-2 md:flex">
-            <span className="text-[10px] font-medium uppercase tracking-widest text-white/50">
-              Scroll
-            </span>
-            <ChevronDown size={18} className="animate-bounce text-white/50" />
+        <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4 text-white/60">
+              <div className="h-px w-12 bg-gold-400/60" />
+              <p className="text-[10px] font-medium uppercase tracking-[0.2em]">
+                {heroContent.caption}
+              </p>
+            </div>
+            <div className="hidden items-center gap-3 md:flex">
+              <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/40">
+                Scroll
+              </span>
+              <ChevronDown size={18} className="animate-bounce text-white/40" />
+            </div>
           </div>
         </div>
       </div>
