@@ -9,20 +9,20 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 const reactionIconMap: Record<string, React.ReactNode> = {
-  heart: <Heart strokeWidth={1.5} />,
-  'flower-2': <span className="text-sm">&#10048;</span>,
-  bookmark: <Bookmark strokeWidth={1.5} />,
-  users: <Users strokeWidth={1.5} />,
+  heart: <Heart strokeWidth={1.5} size={14} />,
+  'flower-2': <span className="text-base">&#10048;</span>,
+  bookmark: <Bookmark strokeWidth={1.5} size={14} />,
+  users: <Users strokeWidth={1.5} size={14} />,
 };
 
 export function SocialSharing() {
   const { ref, visible } = useReveal();
 
   return (
-    <section ref={ref} className="relative overflow-hidden bg-ink-950 py-32 md:py-40">
-      {/* Ambient glow */}
+    <section ref={ref} className="relative overflow-hidden bg-ink-900 py-24 md:py-32 lg:py-40">
+      {/* Subtle ambient */}
       <div className="absolute inset-0">
-        <div className="absolute left-1/2 top-0 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-gold-600/5 blur-3xl" />
+        <div className="absolute left-1/2 top-0 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-sepia-700/5 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
@@ -32,62 +32,62 @@ export function SocialSharing() {
             visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold-400">
+          <p className="mb-3 text-[10px] font-medium uppercase tracking-[0.3em] text-sepia-300">
             {socialFeatures.title}
           </p>
-          <h2 className="font-serif text-4xl font-light leading-tight text-white md:text-5xl">
+          <h2 className="font-serif text-3xl font-light leading-tight text-white md:text-4xl lg:text-5xl">
             Your story deserves to be seen
           </h2>
-          <p className="mt-6 text-base leading-relaxed text-white/60 md:text-lg">
+          <p className="mt-6 text-base leading-relaxed text-white/50">
             {socialFeatures.subtitle}
           </p>
         </div>
 
         {/* Features */}
         <div
-          className={`mt-16 grid gap-8 transition-all duration-1000 delay-200 md:grid-cols-3 ${
+          className={`mt-16 grid gap-5 transition-all duration-1000 delay-200 md:grid-cols-3 ${
             visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
           {socialFeatures.features.map((feature, i) => (
             <div
               key={i}
-              className="group relative border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:border-gold-600/30 hover:bg-white/[0.04]"
+              className="group relative border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04]"
             >
               {/* Icon */}
-              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full border border-gold-600/30 text-gold-400 transition-all duration-300 group-hover:bg-gold-600/10">
+              <div className="mb-5 text-sepia-300/70 transition-colors duration-300 group-hover:text-sepia-300">
                 {iconMap[feature.icon]}
               </div>
 
               {/* Content */}
-              <h3 className="mb-3 text-lg font-medium text-white">{feature.title}</h3>
-              <p className="text-sm leading-relaxed text-white/50">{feature.description}</p>
+              <h3 className="mb-2 text-base font-medium text-white">{feature.title}</h3>
+              <p className="text-sm leading-relaxed text-white/40">{feature.description}</p>
             </div>
           ))}
         </div>
 
-        {/* Reaction types showcase */}
+        {/* Reaction types showcase - emotional tags */}
         <div
           className={`mt-20 transition-all duration-1000 delay-300 ${
             visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <p className="mb-8 text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-bone-400">
+          <p className="mb-8 text-center text-[10px] font-medium uppercase tracking-[0.25em] text-white/30">
             More than just likes
           </p>
 
-          <div className="mx-auto flex max-w-3xl flex-wrap justify-center gap-4 md:gap-6">
+          <div className="mx-auto flex max-w-3xl flex-wrap justify-center gap-3">
             {socialFeatures.reactionTypes.map((reaction, i) => (
               <button
                 key={i}
-                className="group flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.02] px-5 py-3 transition-all duration-300 hover:border-gold-600/40 hover:bg-gold-600/10"
+                className="flex items-center gap-2.5 border border-white/15 bg-white/[0.03] px-4 py-2.5 transition-all duration-300 hover:border-sepia-400/40 hover:bg-sepia-700/10"
               >
-                <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 text-white/60 transition-all duration-300 group-hover:border-gold-400 group-hover:text-gold-400">
+                <span className="text-white/50 transition-colors duration-300 group-hover:text-sepia-300">
                   {reactionIconMap[reaction.icon]}
                 </span>
                 <div className="text-left">
-                  <span className="block text-sm font-medium text-white">{reaction.name}</span>
-                  <span className="text-[10px] uppercase tracking-wider text-white/40">
+                  <span className="block text-sm font-medium text-white/80">{reaction.name}</span>
+                  <span className="text-[9px] uppercase tracking-wider text-white/30">
                     {reaction.description}
                   </span>
                 </div>
@@ -96,55 +96,55 @@ export function SocialSharing() {
           </div>
         </div>
 
-        {/* Memory page mockup */}
+        {/* Memory page mockup - archive style */}
         <div
           className={`mt-20 transition-all duration-1000 delay-400 ${
             visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
           <div className="relative mx-auto max-w-4xl">
-            {/* Decorative frame */}
-            <div className="absolute -inset-4 border border-gold-600/20" />
+            {/* Frame effect */}
+            <div className="absolute -inset-3 border border-white/10 bg-ink-800" />
 
-            <div className="relative bg-gradient-to-br from-bone-900 to-ink-950 p-8 md:p-12">
+            <div className="relative border border-white/15 bg-ink-850 p-8 md:p-10">
               {/* Demo memory page header */}
               <div className="flex items-start justify-between">
                 <div>
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gold-500">
+                  <span className="text-[9px] font-medium uppercase tracking-[0.2em] text-sepia-400">
                     Memory Page
                   </span>
-                  <h3 className="mt-2 font-serif text-2xl text-white md:text-3xl">
+                  <h3 className="mt-2 font-serif text-xl text-white md:text-2xl">
                     The Day That Changed Everything
                   </h3>
-                  <p className="mt-2 text-sm text-white/50">
+                  <p className="mt-2 text-sm text-white/40">
                     Sarah & Michael &middot; Wedding Portrait &middot; May 2024
                   </p>
                 </div>
 
-                <button className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/60 transition-all duration-300 hover:border-gold-400 hover:text-gold-400">
-                  <Share2 size={18} />
+                <button className="flex h-9 w-9 items-center justify-center border border-white/20 text-white/40 transition-all duration-300 hover:border-sepia-400/50 hover:text-sepia-300">
+                  <Share2 size={16} />
                 </button>
               </div>
 
-              {/* Stats */}
-              <div className="mt-8 flex items-center gap-8">
+              {/* Stats - elegant */}
+              <div className="mt-8 flex items-center gap-10">
                 <div className="flex items-center gap-2">
-                  <span className="font-serif text-2xl text-gold-400">847</span>
-                  <span className="text-xs text-white/40">touched hearts</span>
+                  <span className="font-serif text-2xl text-sepia-400">847</span>
+                  <span className="text-xs text-white/30">touched hearts</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="font-serif text-2xl text-gold-400">234</span>
-                  <span className="text-xs text-white/40">remembered</span>
+                  <span className="font-serif text-2xl text-sepia-400">234</span>
+                  <span className="text-xs text-white/30">remembered</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="font-serif text-2xl text-gold-400">89</span>
-                  <span className="text-xs text-white/40">saved</span>
+                  <span className="font-serif text-2xl text-sepia-400">89</span>
+                  <span className="text-xs text-white/30">saved</span>
                 </div>
               </div>
 
               {/* Sample comments */}
-              <div className="mt-8 border-t border-white/10 pt-8">
-                <p className="text-sm text-white/60">
+              <div className="mt-8 border-t border-white/10 pt-6">
+                <p className="text-sm text-white/50 italic">
                   "This brought tears to my eyes. Remember when we used to dream about this day? Love you both." &mdash; Emma
                 </p>
               </div>
@@ -158,12 +158,9 @@ export function SocialSharing() {
             visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <a
-            href="#create"
-            className="inline-flex items-center gap-3 bg-gold-400 px-10 py-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-ink-950 transition-all duration-300 hover:bg-gold-300 hover:shadow-lg hover:shadow-gold-400/30"
-          >
+          <a href="#create" className="inline-flex items-center gap-2 border border-sepia-400/50 bg-sepia-500/20 px-8 py-3.5 text-[10px] font-medium uppercase tracking-[0.2em] text-sepia-200 transition-all duration-500 hover:bg-sepia-500/30 hover:border-sepia-400">
             Create Your Memory Page
-            <ArrowRight size={16} />
+            <ArrowRight size={14} />
           </a>
         </div>
       </div>
