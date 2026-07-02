@@ -71,7 +71,7 @@ export const portraitCategories = [
     title: 'Couple & Wedding',
     emotion: 'The moment two became one',
     description: 'Celebrate the love that changed everything. From engagement to golden anniversary.',
-    image: 'https://images.pexels.com/photos/1009622/pexels-photo-1009622.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/1024994/pexels-photo-1024994.jpeg?auto=compress&cs=tinysrgb&w=1600',
     stories: '2,340 couples',
   },
   {
@@ -79,7 +79,7 @@ export const portraitCategories = [
     title: 'Family Legacy',
     emotion: 'Generations of love, one portrait',
     description: 'Honor the lineage that shaped you. Multi-generational portraits that become family heirlooms.',
-    image: 'https://images.pexels.com/photos/1129865/pexels-photo-1129865.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/1484710/pexels-photo-1484710.jpeg?auto=compress&cs=tinysrgb&w=1600',
     stories: '4,120 families',
   },
   {
@@ -87,7 +87,7 @@ export const portraitCategories = [
     title: 'Pet Companions',
     emotion: 'Unconditional love, remembered',
     description: 'The friend who was always there. Celebrate the bond that needs no words.',
-    image: 'https://images.pexels.com/photos/58953/pexels-photo-58953.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/162240/cat-pet-animals-home-162240.jpeg?auto=compress&cs=tinysrgb&w=1600',
     stories: '3,850 pets honored',
   },
   {
@@ -95,7 +95,7 @@ export const portraitCategories = [
     title: 'In Loving Memory',
     emotion: 'For those who live in our hearts',
     description: 'Create a lasting tribute to those you miss. Transform grief into beauty.',
-    image: 'https://images.pexels.com/photos/65949/old-photos-memories-memory-65949.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/2775042/pexels-photo-2775042.jpeg?auto=compress&cs=tinysrgb&w=1600',
     stories: '1,960 memorials',
   },
   {
@@ -103,7 +103,7 @@ export const portraitCategories = [
     title: 'Baby Milestones',
     emotion: 'The beginning of everything',
     description: 'Capture the moments you never want to forget. First smiles, first steps, forever.',
-    image: 'https://images.pexels.com/photos/1124809/pexels-photo-1124809.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/265987/pexels-photo-265987.jpeg?auto=compress&cs=tinysrgb&w=1600',
     stories: '2,780 milestones',
   },
   {
@@ -111,7 +111,7 @@ export const portraitCategories = [
     title: 'Old Photo Revival',
     emotion: 'Yesterday, beautifully restored',
     description: 'Bring faded photographs back to life. Preserve history with artistic care.',
-    image: 'https://images.pexels.com/photos/7176093/pexels-photo-7176093.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/3774036/pexels-photo-3774036.jpeg?auto=compress&cs=tinysrgb&w=1600',
     stories: '890 restorations',
   },
 ];
